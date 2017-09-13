@@ -59,12 +59,6 @@ div.entete {
     background-color: black;
 }
 
-.margeDroite {
-    max-width: 150px;
-    min-width: 100px;
-    float: right;
-    text-align: center;
-}
 
 .margeDroite a {
     color: black;
@@ -78,4 +72,17 @@ div.entete {
 #logo {
     background-color: transparent;
 }
+
+#corps {
+    position:absolute;
+    right: 150px;
+}
+.margeDroite {
+    max-width: 150px;
+    min-width: 100px;
+    float: right;
+    position:relative;
+    text-align: center;
+}
+
 
