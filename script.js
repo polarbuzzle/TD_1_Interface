@@ -1,4 +1,17 @@
 
-function changeTexte() {
-    document.getElementById("coquin").innerHTML = "Oh toi aussi mon ami";
+
+$(document).ready(function(){
+    
+
+
+    
+    $("p.special").click(caca);
+
+    
+    
+});
+
+    function caca()
+{
+        $(this).fadeOut();
 }
