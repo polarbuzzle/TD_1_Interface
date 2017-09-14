@@ -2,16 +2,12 @@
 
 $(document).ready(function(){
     
-
-
-    
-    $("p.special").click(loadDoc("FactSage.com - Reaction module.php"));
-
-    
+    $("#reaction").click(loadReaction);
+    $("#general").click(loadGeneral);
     
 });
 
-function loadDoc(para1) {
+function loadReaction() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -19,6 +15,18 @@ function loadDoc(para1) {
       this.responseText;
     }
   };
-  xhttp.open("GET", para1, true);
+  xhttp.open("GET", "FactSage.com - Reaction module.php", true);
+  xhttp.send();
+}
+
+function loadGeneral() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("corps").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "FactSage.com - Introduction to FactSage.php", true);
   xhttp.send();
 }

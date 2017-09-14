@@ -1,13 +1,13 @@
 /*Fond d'ecran*/
 body {
-    background-image: url("bckground.jpg");
+    background-color: gray;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Rectangle au haut de la page*/
 div.entete {
     background-color: mediumpurple;
-    border: 2px solid black;
+    border: 2px double black;
 
 }
 
@@ -83,6 +83,18 @@ div.entete {
     float: right;
     position:relative;
     text-align: center;
+}
+
+#copyright {
+    float: left;
+    position: fixed;
+    bottom: 5px;
+}
+
+#date {
+    bottom: 5px;
+    right: 150px;
+    position: fixed;
 }
 
 
