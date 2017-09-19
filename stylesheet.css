@@ -89,12 +89,7 @@ div.entete {
     float: left;
     position: fixed;
     bottom: 5px;
-}
-
-#date {
-    bottom: 5px;
-    right: 150px;
-    position: fixed;
+    font-size: 11px;
 }
 
 

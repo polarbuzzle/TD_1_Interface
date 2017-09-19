@@ -2,12 +2,19 @@
 
 $(document).ready(function(){
     
-    $("#reaction").click(loadReaction);
-    $("#general").click(loadGeneral);
+    $(".inPageLoad").click(function() {
+        loadInPage(this.id);
+    });
+
+    $(".popup").click(function() {
+      //Previent d'ouvrir le lien sur la page actuelle (pour les <a>)
+      event.preventDefault();
+      window.open($(this).attr("href"), "popupWindow", "width = 1000, height = 600, scrollbars = yes");
+    });
     
 });
 
-function loadReaction() {
+function loadInPage(infoPHP) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -15,18 +22,7 @@ function loadReaction() {
       this.responseText;
     }
   };
-  xhttp.open("GET", "FactSage.com - Reaction module.php", true);
+  xhttp.open("GET", infoPHP, true);
   xhttp.send();
 }
 
-function loadGeneral() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("corps").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "FactSage.com - Introduction to FactSage.php", true);
-  xhttp.send();
-}
