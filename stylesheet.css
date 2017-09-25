@@ -1,23 +1,34 @@
 /*Fond d'ecran*/
 body {
-    background-color: gray;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EFFFEF;
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
 /*Rectangle au haut de la page*/
 div.entete {
-    background-color: mediumpurple;
-    border: 2px double black;
+    background:#D5DAB8;
+    position: fixed; 
+    top: -20px;
+    left:0;
+    right:0;
+    padding: 5px;
+    z-index: 1;
+}
 
+/*Attributs de l'image*/
+div.entete img {
+    top: 20px;
+    width:113px;
+    height:50px;
+    position:relative;
 }
 
 /*Dropdown bouton*/
 .dropbtn {
-    background-color: mediumpurple;
-    min-width: 125px;
+    background-color: #181913;
     color: white;
-    padding: 20px 20px;
-    font-size: 20px;
+    padding: 16px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
 }
@@ -32,52 +43,58 @@ div.entete {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 125px;
+    background-color: #80866C;
+    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
-
-.dropdown-content p {
-    font-size: 15px;
-    color: black;
-    padding: 10px 10px;
+/*Attributs des liens dans les boutons*/
+.dropdown-content a {
+    color: white !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: normal !important;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content p:hover {
-    background-color: gray;
+/*Evenement hover des liens dans les boutons*/
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: black !important;
 }
 
+/*Evenement hover pour afficher les boutons*/
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
+/*Evenement qui change la couleur des boutons*/
 .dropdown:hover .dropbtn {
-    background-color: black;
-}
-
-
-.margeDroite a {
+    background-color: #AEB692;
     color: black;
-    font-size: 12px;
 }
 
-#test {
-    background-color: transparent;
+/*Attributs des liens dans la marge de droite*/
+.margeDroite a {
+    color: black !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    text-decoration: underline !important;
 }
 
-#logo {
-    background-color: transparent;
-}
-
+/*Emplacement ou le site charge les pages*/
 #corps {
+    top: 80px;
     position:absolute;
-    right: 150px;
+    right: 140px;
 }
+
+/*Barre verticale avec les liens*/
 .margeDroite {
+    top: 80px;
+    right: 10px;
     max-width: 150px;
     min-width: 100px;
     float: right;
@@ -85,11 +102,32 @@ div.entete {
     text-align: center;
 }
 
+/*Mareg du bas avec les informations sur le copyright du site*/
 #copyright {
-    float: left;
     position: fixed;
-    bottom: 5px;
-    font-size: 11px;
+    font-size: 12px;
+    right: 0;
+    bottom: -15px;
+    left: 0;
+    padding: 1rem;
+    background-color: #D5DAB8;
+    text-align: center;
 }
 
+/*Proprietes des liens du copyright*/
+#copyright a {
+    color: black !important;
+    font-weight: normal !important;
+    text-decoration: underline !important;
+}
+
+/*Image decorative en haut de page*/
+#molecule img {
+    width: 250px;
+    height: 79;
+    top:-19px;
+    right: 30px;
+    z-index: 420;
+    position: fixed;
+}
 
