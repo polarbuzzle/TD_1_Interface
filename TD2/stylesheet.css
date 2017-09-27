@@ -1,0 +1,46 @@
+body{
+    font-family: sans-serif;
+    color: white; 
+}
+
+.entete
+{
+    position: fixed;
+    background:#3293C6; 
+    left:0px;
+    right:0px;
+    top:-10px;
+}
+.langue {
+    float: right;
+    margin-right: 100px;
+    margin-top: 15px;
+}
+
+.Acceuil {
+    
+}
+
+.entete div{
+    display: inline-block;
+}
+
+.entete div p {
+    margin-left: 50px;
+    height:10px;
+}
+
+
+
+.entete div button {
+    background:#3293C6;
+    color:white; 
+    border:1px solid;
+    padding: 0px;
+    
+}
+
+
+
+
+
