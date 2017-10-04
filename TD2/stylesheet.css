@@ -5,20 +5,23 @@ body{
 
 .entete
 {
-    position: fixed;
+    position: static;
     background:#3293C6; 
+    height: 50px;
     left:0px;
     right:0px;
-    top:-10px;
+    top: 0px;
 }
-.langue {
+.langue {solid
+    position: relative;
     float: right;
     margin-right: 100px;
-    margin-top: 15px;
 }
 
 .Acceuil {
-    
+    position: relative;
+    left: 5px;
+    height: 30px;
 }
 
 .entete div{
@@ -27,17 +30,27 @@ body{
 
 .entete div p {
     margin-left: 50px;
-    height:10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
 }
 
-
-
 .entete div button {
+    position: relative;
     background:#3293C6;
     color:white; 
-    border:1px solid;
-    padding: 0px;
-    
+    border:1px none;
+    padding: 14px; 
+}
+.entete div button img {
+    height: 20px;
+    width: 20px;
+}
+
+.container {
+
+    position: relative;
+    top: 10px;
 }
 
 
