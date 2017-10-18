@@ -1,33 +1,56 @@
 
 //main?
 $(document).ready(function(){
-    $('#maTable').DataTable();
     
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
+    let listeDeNom = [];
+    let infoStation = [];
+    let monDataTable;
+    
+        $.getJSON("http://secure.bixi.com/data/stations.json", function(data){
+        
+        monDataTable = $('#maTable').DataTable();
+            
+            $.each(data.stations, function(index, station){
+                
+                let nouvelleStation = {
+                    
+                    'nom' : station.s,
+                    'id' : station.id,
+                    'etat' : station.st,
+                    'bloquee' : station.b,
+                    'suspendue' : station.su,
+                    'latitude' : station.la,
+                    'longitude' : station.lo,
+                    'nbBornes' : station.da,
+                    'velosDispo' : station.ba
+                }
+                
+                monDataTable.row.add([
+                    
+                    nouvelleStation.id,
+                    nouvelleStation.nom,
+                    nouvelleStation.velosDispo,
+                    nouvelleStation.nbBornes,
+                    nouvelleStation.bloquee,
+                    nouvelleStation.suspendue                    
+                       
+                ]).draw();
+                
+                infoStation[nouvelleStation.nom] = nouvelleStation;
+     
+                listeDeNom.push(station.s);
+                
+            });
+            
+        
+    })
+        .done(function(){
+            
+            console.log("salut");
+            
+        });
+    
+    $( "#tags   " ).autocomplete({
+      source: listeDeNom
     });
 });

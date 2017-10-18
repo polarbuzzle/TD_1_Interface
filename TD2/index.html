@@ -5,6 +5,9 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!--Pour l'image du globe-->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    
     <title>VeloMontreal</title>
     <link rel="stylesheet" href="stylesheet.css" />
     <script src ="javascript.js"></script>
@@ -38,7 +41,7 @@
         
         <div class="langue">
              <button>
-                 <img src="/image/globe-01-512.png" alt="globe">
+                 <i class="fa fa-globe" aria-hidden="true"></i>
              </button>
         </div>
               
@@ -56,29 +59,26 @@
     
     <div class="tab-content">
     
+        <!--La data table-->
         <div id="liste" class="tab-pane fade">
-
-            
+            <div id="dataTable">
             <table id="maTable" class="display">
                 <thead>
                     <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
+                        <th>Id</th>
+                        <th>Nom Station</th>
+                        <th>Velos disponibles</th>
+                        <th>Bornes disponibles</th>
+                        <th>Etat bloquee</th>
+                        <th>Etat suspendu</th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2 Data 1</td>
-                        <td>Row 2 Data 2</td>
-                    </tr>
+         
                 </tbody>
             </table>
-            
-            
+            </div>
         </div>
         
         <div id="carte" class="tab-pane fade in active">
