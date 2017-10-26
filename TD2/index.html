@@ -8,13 +8,19 @@
     <!--Pour l'image du globe-->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     
+    <!-- Nos fichiers a nous -->
     <title>VeloMontreal</title>
     <link rel="stylesheet" href="stylesheet.css" />
     <script src ="javascript.js"></script>
     
+    <!-- Pills -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
+    <!-- Api Google -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjonwWBWoE1W6L8sU7KPl7zkRLSaPNC2o"></script>
+    
+    <!-- Pour auto complete-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -84,21 +90,35 @@
         <div id="carte" class="tab-pane fade in active">
 
             <div id="localisation">
-                
-                <div class="ui-widget">
-                    <label for="tags">Tags: </label>
-                    <input id="tags">
+                <div id="boiteAuto">
+                    <div class="ui-widget">
+                        <label for="tags"></label>
+                        <input id="tags" value="Berri / Cherrier">
+                    </div>
+                    <h2>Localisation:</h2>
+                    <hr>
+                    <p id="choixLocalisation"></p>
+                </div>
+            </div>
+            
+            
+            <div id="etatStations">
+                <div id="tableau">
+                    <div class="container">
+                        <div class="item a">a</div>
+                        <div class="item b">b</div>
+                        <div class="item c">c</div>
+                        <div class="item d">d</div>
+                        <div class="item e">e</div>
+                        <div class="item f">f</div>
+                        <div class="item g">g</div>
+                        <div class="item h">h</div>
+                    </div>
                 </div>
                 
             </div>
             
-            <div id="etatStation">
-            etat des stations
-            </div>
-            
-            <div id="map">
-            map
-            </div>
+            <div id="map"></div>
             
         </div>
     

@@ -49,22 +49,21 @@ body{
 .entete div button i {
     height: 20px;
     width: 20px;
-
 }
 
 .pills {
-
     position: relative;
     top: 10px;
-    left: 7.5%;
+    left: 5%;
     width: 100%;
 }
 
 .tab-content {
     position: relative;
-    width: 99%;
+    width: 100%;
     margin-left: 10px;
     top:15px;
+    border: solid 1px;
 }
 
 #carte {
@@ -72,23 +71,24 @@ body{
     height: 100%;
 }
 
-#carte div{
-    display: inline-block;
-}
+
 
 #localisation {
+    position: absolute;
     border: solid 1px;
-    height: 400px;
+    height: 200px;
     width: 40%;
 }
 
-#etatStation {
-    height: 400px;
-    width: 59%;
+#etatStations {
+    float: right;
+    border: solid 1px;
+    height: 200px;
+    width: 60%;
 }
 
 #map {
-    height: 450px;
+    height: 600px;
     width: 100%;
 }
 
@@ -98,6 +98,81 @@ body{
     left: 7.5%;
 }
 
+#boiteAuto h2 {
+    color: #3293C6;
+}
 
+#choixLocalisation {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
 
+#tableau {
+    border: solid 1px;
+    width: 450px;
+}
 
+.container{
+  display: grid;
+  grid-template-columns: 150px 150px;
+  grid-template-rows: 25px 25px 25px 25px; 
+
+  color: #444;
+}
+
+.item{
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 150%;
+}
+
+    .a {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .b {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .c {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .d {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .e {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .f {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .g {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .h {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;

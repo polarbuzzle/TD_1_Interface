@@ -46,11 +46,25 @@ $(document).ready(function(){
     })
         .done(function(){
             
-            console.log("salut");
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 45.5016889, lng: -73.56725599999999},
+                zoom: 13
+            });
             
+                    
         });
     
-    $( "#tags   " ).autocomplete({
+    $( "#tags" ).autocomplete({
       source: listeDeNom
     });
+    
+    $("#tags").autocomplete({
+        select: function(event, ui){
+            
+            
+            document.getElementById("choixLocalisation").innerHTML = ui.item.value;
+            
+        }
+    });
+    
 });
