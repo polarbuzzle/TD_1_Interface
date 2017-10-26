@@ -61,8 +61,11 @@ $(document).ready(function(){
     $("#tags").autocomplete({
         select: function(event, ui){
             
+            var station = ui.item.value;
             
-            document.getElementById("choixLocalisation").innerHTML = ui.item.value;
+            document.getElementById("choixLocalisation").innerHTML = station;
+            
+            document.getElementById("IdStation").innerHTML = infoStation[station].id
             
         }
     });

@@ -114,20 +114,19 @@ body{
 }
 
 .container{
-  display: grid;
-  grid-template-columns: 150px 150px;
-  grid-template-rows: 25px 25px 25px 25px; 
-
-  color: #444;
+  display: inline-grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 35px 35px 35px 35px; 
 }
 
 .item{
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
   padding: 5px;
-  font-size: 150%;
+  font-size: 80%;
 }
+.item p{
+    display: inline-block;
+}
+ 
 
     .a {
         grid-column-start: 1;
@@ -176,3 +175,9 @@ body{
         grid-column-end: 3;
         grid-row-start: 4;
         grid-row-end: 5;
+    }
+
+    
+    
+    
+    
