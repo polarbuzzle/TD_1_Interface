@@ -63,7 +63,6 @@ body{
     width: 100%;
     margin-left: 10px;
     top:15px;
-    border: solid 1px;
 }
 
 #carte {
@@ -75,14 +74,12 @@ body{
 
 #localisation {
     position: absolute;
-    border: solid 1px;
     height: 200px;
     width: 40%;
 }
 
 #etatStations {
     float: right;
-    border: solid 1px;
     height: 200px;
     width: 60%;
 }
@@ -109,72 +106,121 @@ body{
 }
 
 #tableau {
-    border: solid 1px;
     width: 450px;
 }
 
 .container{
   display: inline-grid;
   grid-template-columns: 200px 200px;
-  grid-template-rows: 35px 35px 35px 35px; 
+  grid-template-rows:23px 15px 35px 35px 35px 35px; 
 }
 
 .item{
   padding: 5px;
   font-size: 80%;
+  border-top: solid 1px;
+  border-color: #F0F0F0;
 }
-.item p{
+.item p, .tiRond{
     display: inline-block;
 }
- 
 
+.tiRond{
+    padding: 5px; 
+    min-width:25px;
+    height:100%;
+    background-color: black;
+    float: right; 
+    margin-right: 50px;
+    color: white;
+    border-radius: 11px;
+    background-color:#8A8A8A;
+    text-align: center;
+}
+    .y {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        color:#03A9E5;
+        font-size: 15px;
+        border: none !important;
+    }
+
+    .z {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color:#03A9E5;
+    }
+ 
     .a {
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        border-right: solid 1px; 
+        border-color: #F0F0F0;
+        background-color:#FAFAFA;
+        
+       
     }
     .b {
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-row-start: 4;
+        border-right: solid 1px; 
+        border-color: #F0F0F0;
+        grid-row-end: 5;
+
     }
     .c {
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        border-right: solid 1px; 
+        background-color:#FAFAFA;
+        border-color: #F0F0F0;
+        
     }
     .d {
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 4;
-        grid-row-end: 5;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        border-right: solid 1px; 
+        border-color: #F0F0F0;
+
     }
     .e {
         grid-column-start: 2;
         grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background-color:#FAFAFA;
     }
     .f {
         grid-column-start: 2;
         grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+
     }
     .g {
         grid-column-start: 2;
         grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        background-color:#FAFAFA;
     }
     .h {
         grid-column-start: 2;
         grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 5;
+        grid-row-start: 6;
+        grid-row-end: 7;
+
     }
 
     
