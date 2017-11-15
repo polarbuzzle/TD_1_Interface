@@ -2,11 +2,15 @@
 <html>
 <head>
 
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet">
 
     <link rel="stylesheet" href="thermostat.css">
+    <script src ="chambre.js"></script>
     <script src ="thermostat.js"></script>
-            
+    
 </head>
 
 <body>
@@ -15,33 +19,47 @@
     
         <!--Affichage du thermometre-->
         <div class="item a">
+        
+            <div id = "thermometre">
+                <div id = "barreThermo">
+                </div>
+            </div>
+        
         </div>
         
         <div class="item b"> <p>Chauffage</p> </div>
         
         <!--Etat du chaffage-->
-        <div class="item c"> <p>ACTIF OU INACTIF</p> </div>
+        <div class="item c"> <p id = "etatChauffage">ACTIF OU INACTIF</p> </div>
         
         <div class="item d"> <p>Temperature exterieure</p> </div>
         
         <!--Temperature exterieure-->
-        <div class="item e"> <p id="test" value=0>value</p> </div>
+        <div class="item e"> <p id="tempExt">value</p> </div>
         
         <div class="item f"> <p>Thermostat</p> </div>
         
         <!--Temperature interieure-->
-        <div class="item g"> <p>20 a changer</p> </div>
+        <div class="item g"> <p id = "thermostat">20 a changer</p> </div>
         
         
         <!--Affichage du thermostat-->
         <div class="item h">
+        
+            
+            
         </div>
         
-        <div class="item i"> <p>Thermometre</p> </div>
+        <div class="item i"> <p>Thermometre</p> <div id = "tdValeurThermostat">-20</div> </div>
         
         <div class="item j"> <p>Thermostat</p> </div>
     
     </div>
+    
+    <div id = "thermostatSlider">
+                
+            </div>
+    
 
 </body>
 </html>
